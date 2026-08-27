@@ -25,7 +25,7 @@ FROM node:24.18.0 AS node_base
 RUN corepack enable
 RUN npm i -g corepack@latest
 # Activate and install pnpm.
-RUN corepack prepare pnpm@11.13.1 --activate
+RUN corepack prepare pnpm@11.24.0 --activate
 # The final docker image of the multi stage build.
 FROM jenkins/ssh-agent:jdk21
 # Copy of the location of the installed node tools.
